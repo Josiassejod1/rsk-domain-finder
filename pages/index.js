@@ -6,7 +6,7 @@ import RNS from '@rsksmart/rns'
 import { ChainId } from '@rsksmart/rns/types'
 import React, {createRef, useState} from "react";
 import RSK_PUBLIC_ADDRESS from "./shared/consts";
-import { Button, Form, FormGroup, Label, Input, FormFeedback } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, InputGroupText, InputGroup } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -35,13 +35,17 @@ export default function Home() {
 
 
   return (
-   <div>
+   <div className="container">
      <Form onSubmit={handleSubmit} className="center">
      <FormGroup>
-     <Label for="domain">
-        RSK Domain: 
+     <Label for="domain" className="column">
+        <InputGroup>
         <Input type="text"  value={domain} onChange={handleChange} id="domain" />
-        <Input type="button" value="rsk" disabled={true} />
+        <InputGroupText>
+          rsk
+        </InputGroupText>
+        </InputGroup>
+      </Label>
          {
            (available == false ) &&  <p>
            Oh no! that name is already taken
@@ -57,7 +61,7 @@ export default function Home() {
           </p>
         }
         <Button>Submit</Button>
-      </Label>
+
      </FormGroup>
    </Form>
    </div>
