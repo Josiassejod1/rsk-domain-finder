@@ -35,29 +35,31 @@ export default function Home() {
 
 
   return (
-   <Form onSubmit={handleSubmit}>
+   <div>
+     <Form onSubmit={handleSubmit} className="center">
      <FormGroup>
      <Label for="domain">
         RSK Domain: 
         <Input type="text"  value={domain} onChange={handleChange} id="domain" />
         <Input type="button" value="rsk" disabled={true} />
          {
-           (available == false ) &&  <FormFeedback>
+           (available == false ) &&  <p>
            Oh no! that name is already taken
-         </FormFeedback>
+         </p>
          }
-        {available && <FormFeedback valid>
+        {available && <p>
           Domain name is valid
-        </FormFeedback>
+        </p>
         }
         {
-          error != "" && <FormFeedback invalid>
-          {error}
-        </FormFeedback>
+          error != "" && <p>
+             {error}
+          </p>
         }
         <Button>Submit</Button>
       </Label>
      </FormGroup>
    </Form>
+   </div>
   )
 }
