@@ -6,7 +6,7 @@ import RNS from '@rsksmart/rns'
 import { ChainId } from '@rsksmart/rns/types'
 import React, {createRef, useState} from "react";
 import RSK_PUBLIC_ADDRESS from "./shared/consts";
-import { Button, Form, FormGroup, Label, Input, InputGroupText, InputGroup } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, InputGroupText, InputGroup, Alert } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -36,31 +36,37 @@ export default function Home() {
 
   return (
    <div className="container">
+     <h1 style={{"paddingBottom": "30px"}}>
+       RNS Domain Creator
+     </h1>
      <Form onSubmit={handleSubmit} className="center">
      <FormGroup>
-     <Label for="domain" className="column">
-        <InputGroup>
+        <InputGroup style={{"paddingBottom": "30px"}}>
         <Input type="text"  value={domain} onChange={handleChange} id="domain" />
         <InputGroupText>
           rsk
         </InputGroupText>
         </InputGroup>
-      </Label>
-         {
-           (available == false ) &&  <p>
+
+        {
+           (available == false && available != null) &&  <Alert color="warning">
            Oh no! that name is already taken
-         </p>
+         </Alert>
          }
-        {available && <p>
-          Domain name is valid
-        </p>
+        
+        {(available == true)&& <Alert >
+          Domain name is available
+        </Alert>
         }
         {
-          error != "" && <p>
+          (error != "" && error != null) && <Alert color="danger">
              {error}
-          </p>
+          </Alert>
         }
+  
         <Button>Submit</Button>
+
+       
 
      </FormGroup>
    </Form>
