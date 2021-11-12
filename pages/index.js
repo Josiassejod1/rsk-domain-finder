@@ -6,7 +6,7 @@ import RNS from '@rsksmart/rns'
 import { ChainId } from '@rsksmart/rns/types'
 import React, {createRef, useState} from "react";
 import RSK_PUBLIC_ADDRESS from "./shared/consts";
-import { Button, Form, FormGroup, Label, Input, InputGroupText, InputGroup, Alert } from 'reactstrap';
+import { Button, Form, FormGroup, Footer, Input, InputGroupText, InputGroup, Alert } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -70,6 +70,11 @@ export default function Home() {
 
      </FormGroup>
    </Form>
+  <footer className="footer fixed-bottom ">
+    <div class="container">
+      <span style={{margin: 5}}class="text-muted">Created by <a href="https://www.dalvindigital.com" target="_blank">Dalvin Digital Design</a></span>
+    </div>
+  </footer>
    </div>
   )
 }
