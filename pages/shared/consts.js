@@ -1,1 +1,0 @@
-export const RSK_PUBLIC_ADDRESS = 'https://public-node.rsk.co';
