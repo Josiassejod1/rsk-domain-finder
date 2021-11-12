@@ -71,8 +71,8 @@ export default function Home() {
      </FormGroup>
    </Form>
   <footer className="footer fixed-bottom ">
-    <div class="container">
-      <span style={{margin: 5}}class="text-muted">Created by <a href="https://www.dalvindigital.com" target="_blank">Dalvin Digital Design</a></span>
+    <div className="container">
+      <span style={{margin: 5}}className="text-muted">Created by <a href="https://www.dalvindigital.com" target="_blank"  rel="noreferrer">Dalvin Digital Design</a></span>
     </div>
   </footer>
    </div>
