@@ -5,7 +5,6 @@ import Web3 from 'web3'
 import RNS from '@rsksmart/rns'
 import { ChainId } from '@rsksmart/rns/types'
 import React, {createRef, useState} from "react";
-import RSK_PUBLIC_ADDRESS from "./shared/consts";
 import { Button, Form, FormGroup, Footer, Input, InputGroupText, InputGroup, Alert } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
