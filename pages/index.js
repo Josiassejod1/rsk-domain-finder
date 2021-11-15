@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { injected } from './component/wallet/connector';
 import { useWeb3React } from "@web3-react/core";
 import Domain from "./component/Domain";
+import {Button} from "reactstrap";
 
 
 
@@ -20,6 +21,8 @@ export default function Home() {
 
 
   return (
-   <Domain />
+    <div>
+      { active ?   <Domain /> :  <Button onClick={connect}>Connect to MetaMask</Button>}
+    </div>
   );
 }
