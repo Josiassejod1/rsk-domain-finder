@@ -5,6 +5,7 @@ import { injected } from './component/wallet/connector';
 import { useWeb3React } from "@web3-react/core";
 import Domain from "./component/Domain";
 import {Button} from "reactstrap";
+import CryptoCard from "./component/CryptoCard";
 
 
 
@@ -22,6 +23,7 @@ export default function Home() {
 
   return (
     <div>
+      <CryptoCard price="45.00" coin="RIF" />
       { active ?   <Domain /> :  <Button onClick={connect}>Connect to MetaMask</Button>}
     </div>
   );
