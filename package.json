@@ -2,11 +2,11 @@
   "name": "rsk-domain-site",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
-  },
+    "export": "next export"  
+},
   "dependencies": {
     "@rsksmart/rns": "^1.9.0",
     "bootstrap": "^5.1.3",
